@@ -1,0 +1,15 @@
+{
+  "name": "nodejs_express_rest2mqtt",
+  "version": "1.0.0",
+  "description": "Über HTTP-POST empfangener String wird auf MQTT-Topic veröffentlicht",
+  "author": "MDecker-MobileComputing",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1",
+    "logging": "^4.2.0"
+  },
+  "scripts": {
+    "start": "node src/main.js"
+  }
+}
