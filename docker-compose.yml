@@ -1,0 +1,17 @@
+version: '3.8'
+
+# https://github.com/emqx/emqx?tab=readme-ov-file#run-emqx-using-docker
+# docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8084:8084 -p 8883:8883 -p 18083:18083 emqx/emqx:latest
+
+services:
+  mqtt-server:
+    image: emqx/emqx:latest
+    container_name: mqtt-server
+    ports:
+      - "1883:1883"
+      - "8083:8083"
+      - "8084:8084"
+      - "8883:8883"
+      - "18083:18083" # Web-UI, Default-Login: admin/public
+    restart: always  # Optional: ensures the container restarts on failure
+# Zuordnung Portnummer kann man auch auf Web-UI nachschauen: http://localhost:18083/#/listener
