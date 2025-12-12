@@ -10,5 +10,5 @@ await mqttClient.subscribeAsync( "mein-topic" );
 
 mqttClient.on( "message", ( topic, nachricht ) => {
 
-    logger.info( `Nachricht auf Topic ${topic} empfangen: ${nachricht}` );
+    logger.info( `Nachricht auf Topic "${topic}" empfangen: ${nachricht}` );
 });
