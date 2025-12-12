@@ -3,7 +3,7 @@ import createLogger from "logging";
 import mqtt         from "mqtt";
 
 const logger     = createLogger( "mqtt-sender" );
-const mqttClient = await mqtt.connectAsync( "ws://localhost:8083/mqtt" );
+const mqttClient = await mqtt.connectAsync( "ws://mqtt-server:8083/mqtt" );
 logger.info( "Verbindung zu MQTT-Client aufgebaut." );
 
 const topic = "mein-topic";
