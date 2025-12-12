@@ -1,0 +1,15 @@
+{
+  "name": "nodejs_rest2mqtt_empfaenger",
+  "version": "1.0.0",
+  "description": "Über MQTT empfangener String wird in der Konsole ausgegeben",
+  "author": "MDecker-MobileComputing",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "dependencies": {
+    "logging": "^4.2.0",
+    "mqtt": "^5.14.1"
+  },
+  "scripts": {
+    "start": "node src/main.js"
+  }
+}
