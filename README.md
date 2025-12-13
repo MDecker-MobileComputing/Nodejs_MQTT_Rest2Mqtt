@@ -26,7 +26,7 @@ Der Unterschied ist, ob die beiden Nodejs-Anwendungen auch in Docker-Container l
 
 **Nodejs-Anwendungen nicht in Docker-Container:**
 
-* Starten Sie den MQTT-Server im Container durch Aufruf des Skripts `mqttAlleineStarten.bat` bzw. `mqttAlleineStarten.sh`.
+* Starten Sie den MQTT-Server im Container durch Aufruf des Skripts `mqttAlleineStarten.bat`(Windows)  bzw. `mqttAlleineStarten.sh` (Linux+MacOS).
 * Die beiden Nodejs-Anwendungen werden dann mit `npm start` im jeweiligen Unterverzeichnis (`1_Sender` bzw. `2_Empfaenger`)
   gestartet.
 
@@ -34,8 +34,8 @@ Der Unterschied ist, ob die beiden Nodejs-Anwendungen auch in Docker-Container l
 
 **Nodejs-Anwendungen in Docker-Container:**
 
-Starten Sie alle drei Container mit `docker compose up`. Die Container mit den beiden Nodejs-Anwendungen 
-werden bei Bedarf vorher erstellt. 
+Starten Sie alle drei Container durch Eingabe des Befehls `docker compose up` im Wurzelverzeichnis des Repos.
+Die Container mit den beiden Nodejs-Anwendungen werden bei Bedarf vorher erstellt. 
 
 <br>
 
