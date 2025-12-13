@@ -2,19 +2,19 @@ version: '3.8'
 
 # https://github.com/emqx/emqx?tab=readme-ov-file#run-emqx-using-docker
 
+# Nur mqtt-server starten (für Test auf lokalem Rechner, nicht auf GH Codespace): 
+# docker compose up mqtt-server --no-deps
+
 services:
   mqtt-server:
     image: emqx/emqx:latest
     container_name: mqtt-server
     ports:
-      - "1883:1883"
-      - "8083:8083"
-      - "8084:8084"
-      - "8883:8883"
+      - "8083:8083"   # Websocket, unverschlüsselt (ws://....)
       - "18083:18083" # Web-UI, Default-Login: admin/public
     restart: always  # Optional: ensures the container restarts on failure
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:18083"]
+      test: [ "CMD", "curl", "-f", "http://localhost:18083" ]
       interval: 10s
       timeout: 5s
       retries: 5
