@@ -13,7 +13,29 @@ http://localhost:8080/stringVerarbeiten/Lorem%20Ipsum
 
 <br>
 
-Der MQTT-Server wird mit *Docker Compose* bereitgestellt.
+----
+
+## Anwendungen ausführen ##
+
+<br>
+
+Es gibt zwei Optionen zur Ausführung der Anwendungen, wobei bei beiden der MQTT-Server (EMQX) lokal in einem Docker-Container läuft.
+Der Unterschied ist, ob die beiden Nodejs-Anwendungen auch in Docker-Container laufen oder nicht.
+
+<br>
+
+**Nodejs-Anwendungen nicht in Docker-Container:**
+
+* Starten Sie den MQTT-Server im Container durch Aufruf des Skripts `mqttAlleineStarten.bat` bzw. `mqttAlleineStarten.sh`.
+* Die beiden Nodejs-Anwendungen werden dann mit `npm start` im jeweiligen Unterverzeichnis (`1_Sender` bzw. `2_Empfaenger`)
+  gestartet.
+
+<br>
+
+**Nodejs-Anwendungen in Docker-Container:**
+
+Starten Sie alle drei Container mit `docker compose up`. Die Container mit den beiden Nodejs-Anwendungen 
+werden bei Bedarf vorher erstellt. 
 
 <br>
 
