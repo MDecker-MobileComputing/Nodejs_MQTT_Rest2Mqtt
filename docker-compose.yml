@@ -12,7 +12,7 @@ services:
     ports:
       - "8083:8083"   # Websocket, unverschlüsselt (ws://....)
       - "18083:18083" # Web-UI, Default-Login: admin/public
-    restart: always  # Optional: ensures the container restarts on failure
+    restart: always # Optional: ensures the container restarts on failure
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:18083" ]
       interval: 10s
@@ -24,6 +24,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+    environment:
+      - MQTT_SERVER_HOST=mqtt-server
     depends_on:
       mqtt-server:
         condition: service_healthy
@@ -31,6 +33,8 @@ services:
     build:
       context: 2_Empfaenger
       dockerfile: Dockerfile
+    environment:
+      - MQTT_SERVER_HOST=mqtt-server
     depends_on:
       mqtt-sender:
         condition: service_started

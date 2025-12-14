@@ -7,7 +7,6 @@ COPY package.json /app
 RUN npm install
 
 COPY . /app
-COPY .env.docker /app/.env 
 
 EXPOSE 8080
 

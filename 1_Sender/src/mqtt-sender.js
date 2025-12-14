@@ -4,7 +4,10 @@ import mqtt         from "mqtt";
 
 const logger = createLogger( "mqtt-sender" );
 
-// Konfiguration auswerten
+
+// HOST für MQTT-Server bestimmen; Default-Wert ist "localhost",
+// für Betrieb in Docker-Container ist in docker-compose.yml eine
+// Umgebungsvariable gesetzt.
 dotenv.config();
 const domain = process.env.MQTT_SERVER_HOST || "localhost";
 const url    = `ws://${ domain }:8083/mqtt`;
