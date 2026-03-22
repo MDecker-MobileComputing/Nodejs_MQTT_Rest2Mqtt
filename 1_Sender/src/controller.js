@@ -27,7 +27,8 @@ function getStringEmpfangen( req, res ) {
     if ( typeof text !== "string" || text.trim().length === 0 ) {
 
         logger.warn( "Pfad-Parameter fehlt" );
-        return res.status( 400 ).json({ nachricht: "FEHLER: Pfad-Parameter fehlt" });
+        return res.status( 400 )
+                  .json({ nachricht: "FEHLER: Pfad-Parameter fehlt" });
     }
 
     text = text.trim();
