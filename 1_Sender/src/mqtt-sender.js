@@ -1,5 +1,4 @@
 import createLogger from "logging";
-import dotenv       from "dotenv";
 import mqtt         from "mqtt";
 
 const logger = createLogger( "mqtt-sender" );
