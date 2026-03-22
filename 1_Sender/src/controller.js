@@ -36,5 +36,6 @@ function getStringEmpfangen( req, res ) {
 
     sendeStringViaMQTT( text );
 
-    return res.status(200).json({ nachricht: `ERFOLG: String "${text}" auf MQTT-Topic gesendet.` });
+    return res.status(200)
+              .json({ nachricht: `ERFOLG: String "${text}" auf MQTT-Topic gesendet.` });
 }
