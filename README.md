@@ -37,6 +37,10 @@ Der Unterschied ist, ob die beiden Nodejs-Anwendungen auch in Docker-Container l
 Starten Sie alle drei Container durch Eingabe des Befehls `docker compose up` im Wurzelverzeichnis des Repos.
 Die Container mit den beiden Nodejs-Anwendungen werden bei Bedarf vorher erstellt. 
 
+Sie können die drei Container nach Ende der Arbeit mit `docker compose stop` herunterfahren 
+(um sie später mit `docker compose up` wieder zu starten), oder mit `docker compose down` 
+herunterfahren und löschen.
+
 <br>
 
 ----
