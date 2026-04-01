@@ -3,7 +3,6 @@ import mqtt         from "mqtt";
 
 const logger = createLogger( "mqtt-sender" );
 
-
 // HOST für MQTT-Server bestimmen; Default-Wert ist "localhost",
 // für Betrieb in Docker-Container ist in docker-compose.yml eine
 // Umgebungsvariable gesetzt.
