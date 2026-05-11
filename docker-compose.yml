@@ -17,6 +17,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
   mqtt-sender:
     build:
       context: 1_Sender
@@ -28,6 +29,7 @@ services:
     depends_on:
       mqtt-server:
         condition: service_healthy
+
   mqtt-empfaenger:
     build:
       context: 2_Empfaenger
